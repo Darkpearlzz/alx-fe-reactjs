@@ -1,12 +1,18 @@
-import './App.css'
-import WelcomeMessage from './components/WelcomeMessage'
+import "./App.css";
+import Header from "./Header";
+import MainContent from "./MainContent";
+import Footer from "./Footer";
 
 function App() {
   return (
-    <div>
-      <WelcomeMessage />
-    </div>
-  )
+    <>
+      <Header />
+
+      <MainContent />
+
+      <Footer />
+    </>
+  );
 }
 
 export default App;
