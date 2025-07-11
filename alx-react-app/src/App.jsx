@@ -1,11 +1,14 @@
 import "./App.css";
-import Header from "./Header";
-import MainContent from "./MainContent";
-import Footer from "./Footer";
+import WelcomeMessage from "./components/WelcomeMessage";
+import MainContent from "./components/MainContent";
+import Footer from "./components/Footer";
+import Header from "./components/header";
 
 function App() {
   return (
     <>
+      <WelcomeMessage />
+
       <Header />
 
       <MainContent />
