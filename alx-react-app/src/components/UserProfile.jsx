@@ -2,8 +2,8 @@ const UserProfile = (Props) => {
   return (
     <div>
       <h2>{Props.name}</h2>
-      <p>{Props.age}</p>
-      <p>{Props.bio}</p>
+      <p>Age: {Props.age}</p>
+      <p>Bio: {Props.bio}</p>
     </div>
   );
 };
