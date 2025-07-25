@@ -1,8 +1,8 @@
-import { AddRecipeForm } from "./components/AddRecipeForm";
-import { RecipeList } from "./components/RecipeList";
+import AddRecipeForm from "./components/AddRecipeForm";
+import RecipeList from "./components/RecipeList";
 import "./App.css";
 
-export const App = () => {
+const App = () => {
   return (
     <div className="container">
       <h1>Recipe Sharing App</h1>
@@ -11,3 +11,5 @@ export const App = () => {
     </div>
   );
 };
+
+export default App;
