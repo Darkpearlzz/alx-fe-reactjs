@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import AddRecipeForm from "./AddRecipeForm";
 
 const RecipeList = () => {
-  const recipes = useRecipeStore((state) => state.recipes);
+  const filteredRecipes = useRecipeStore((state) => state.filteredRecipes);
   const deleteRecipe = useRecipeStore((state) => state.deleteRecipe);
 
   const [editingRecipe, setEditingRecipe] = useState(null);
@@ -31,10 +31,10 @@ const RecipeList = () => {
         </>
       )}
 
-      {recipes.length === 0 ? (
-        <p>No recipes added yet.</p>
+      {filteredRecipes.length === 0 ? (
+        <p>No matching recipes found.</p>
       ) : (
-        recipes.map((recipe) => (
+        filteredRecipes.map((recipe) => (
           <div key={recipe.id} className="recipe-card">
             <Link
               to={`/recipe/${recipe.id}`}
