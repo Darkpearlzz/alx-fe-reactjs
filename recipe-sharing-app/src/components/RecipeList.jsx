@@ -6,6 +6,12 @@ import AddRecipeForm from "./AddRecipeForm";
 const RecipeList = () => {
   const filteredRecipes = useRecipeStore((state) => state.filteredRecipes);
   const deleteRecipe = useRecipeStore((state) => state.deleteRecipe);
+  const addFavorite = useRecipeStore((state) => state.addFavorite);
+  const removeFavorite = useRecipeStore((state) => state.removeFavorite);
+  const favorites = useRecipeStore((state) => state.favorites);
+  const generateRecommendations = useRecipeStore(
+    (state) => state.generateRecommendations
+  );
 
   const [editingRecipe, setEditingRecipe] = useState(null);
 
@@ -16,6 +22,8 @@ const RecipeList = () => {
   const handleEditComplete = () => {
     setEditingRecipe(null);
   };
+
+  const isFavorite = (id) => favorites.includes(id);
 
   return (
     <div>
@@ -40,14 +48,33 @@ const RecipeList = () => {
               to={`/recipe/${recipe.id}`}
               style={{ textDecoration: "none", color: "black" }}
             >
-              <h3>{recipe.title}</h3>
+              <h3>
+                {recipe.title}
+                {isFavorite(recipe.id) && <span> ❤️</span>}
+              </h3>
               <p>{recipe.description}</p>
             </Link>
 
             <button onClick={() => handleEdit(recipe)}>Edit</button>
             <button onClick={() => deleteRecipe(recipe.id)}>Delete</button>
+
+            <button
+              onClick={() =>
+                isFavorite(recipe.id)
+                  ? removeFavorite(recipe.id)
+                  : addFavorite(recipe.id)
+              }
+            >
+              {isFavorite(recipe.id) ? "Remove Favorite" : "Add to Favorites"}
+            </button>
           </div>
         ))
+      )}
+
+      {favorites.length > 0 && (
+        <button onClick={generateRecommendations} style={{ marginTop: "20px" }}>
+          Get Personalized Recommendations
+        </button>
       )}
     </div>
   );
