@@ -21,7 +21,7 @@ export default function Search() {
     setPage(1);
 
     try {
-      const results = await searchUsers(
+      const results = await fetchUserData(
         username.trim(),
         location.trim(),
         minRepos.trim(),
