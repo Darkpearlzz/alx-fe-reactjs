@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { searchUsers, fetchUserDetails } from "../services/githubService";
+import { useState } from "react";
+import { fetchUserData, fetchUserDetails } from "../services/githubService";
 
 export default function Search() {
   const [username, setUsername] = useState("");
@@ -31,7 +31,6 @@ export default function Search() {
       if (results.items.length === 0) {
         setError("Looks like we cant find the user");
       } else {
-        // Fetch details for each user (location, repos count)
         const detailedUsers = await Promise.all(
           results.items.map(async (u) => {
             const details = await fetchUserDetails(u.login);
@@ -53,7 +52,7 @@ export default function Search() {
     setLoading(true);
 
     try {
-      const results = await searchUsers(
+      const results = await fetchUserData(
         username.trim(),
         location.trim(),
         minRepos.trim(),
