@@ -68,7 +68,7 @@ export default function RecipeDetail() {
         <section>
           <h2 className="text-2xl font-semibold mb-2">Instructions</h2>
           <ol className="list-decimal list-inside space-y-2 text-gray-600">
-            {(recipe.instructions || []).map((step, idx) => (
+            {(recipe.steps || []).map((step, idx) => (
               <li key={idx}>{step}</li>
             ))}
           </ol>

@@ -12,7 +12,7 @@
       "Freshly ground black pepper",
       "Salt"
     ],
-    "instructions": [
+    "steps": [
       "Cook spaghetti in salted boiling water until al dente.",
       "Fry pancetta until crisp.",
       "Beat eggs with cheese and pepper.",
@@ -35,7 +35,7 @@
       "2 tbsp butter",
       "Salt"
     ],
-    "instructions": [
+    "steps": [
       "Marinate chicken in yogurt and spices for at least 30 minutes.",
       "Grill or pan-fry chicken until cooked through.",
       "Prepare sauce with tomatoes, butter and spices.",
@@ -56,7 +56,7 @@
       "Olive oil",
       "Salt & pepper"
     ],
-    "instructions": [
+    "steps": [
       "Toast bread to your liking.",
       "Mash avocado with lemon, salt and pepper.",
       "Spread on toast and finish with chili flakes and olive oil."
@@ -75,7 +75,7 @@
       "1 tbsp cornstarch",
       "Oil for frying"
     ],
-    "instructions": [
+    "steps": [
       "Toss beef in cornstarch and a little soy.",
       "High-heat stir-fry beef briefly then remove.",
       "Stir-fry vegetables, add beef back with sauce and finish."
@@ -93,7 +93,7 @@
       "Tahini, lemon, garlic for dressing",
       "Salt & pepper"
     ],
-    "instructions": [
+    "steps": [
       "Cook quinoa according to package.",
       "Roast vegetables and season chickpeas.",
       "Assemble bowl and drizzle tahini dressing."

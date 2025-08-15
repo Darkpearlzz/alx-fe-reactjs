@@ -5,9 +5,9 @@ export default function AddRecipeForm() {
   const navigate = useNavigate();
   const [title, setTitle] = useState('');
   const [summary, setSummary] = useState('');
-  const [imageFilename, setImageFilename] = useState(''); // new field
+  const [imageFilename, setImageFilename] = useState(''); 
   const [ingredientsText, setIngredientsText] = useState('');
-  const [instructionsText, setInstructionsText] = useState('');
+  const [stepsText, setStepsText] = useState('');
   const [errors, setErrors] = useState({});
 
   function validate() {
@@ -18,8 +18,8 @@ export default function AddRecipeForm() {
     const ingredients = parseLines(ingredientsText);
     if (ingredients.length < 2) errs.ingredients = 'Please provide at least two ingredients (one per line).';
 
-    const instructions = parseLines(instructionsText);
-    if (instructions.length < 1) errs.instructions = 'Please provide at least one instruction step.';
+    const instructions = parseLines(stepsText);
+    if (steps.length < 1) errs.steps = 'Please provide at least one instruction step.';
 
     
     if (imageFilename && /[\\/]/.test(imageFilename)) {
@@ -27,7 +27,7 @@ export default function AddRecipeForm() {
     }
 
     setErrors(errs);
-    return { valid: Object.keys(errs).length === 0, ingredients, instructions };
+    return { valid: Object.keys(errs).length === 0, ingredients, steps };
   }
 
   function parseLines(text) {
@@ -39,7 +39,7 @@ export default function AddRecipeForm() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const { valid, ingredients, instructions } = validate();
+    const { valid, ingredients, steps } = validate();
     if (!valid) return;
 
     const stored = localStorage.getItem('recipes');
@@ -60,7 +60,7 @@ export default function AddRecipeForm() {
       summary: summary.trim(),
       image: imagePath,
       ingredients,
-      instructions,
+      steps,
     };
 
     const updated = [newRecipe, ...list];
