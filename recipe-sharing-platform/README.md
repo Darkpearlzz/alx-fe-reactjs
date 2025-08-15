@@ -1,12 +1,24 @@
-# React + Vite
+# Recipe Sharing Home Page (React + Tailwind)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## What is included
+- `src/data.json` — mock recipe data
+- `src/components/HomePage.jsx` — the Home Page component
+- `src/App.jsx` and `src/main.jsx` — minimal app wrapper
+- `src/index.css` — Tailwind directives
 
-Currently, two official plugins are available:
+## How to use
+1. Ensure you have a React + Vite project with Tailwind configured.
+2. Drop `data.json` into `src/`.
+3. Add the `components` folder and place `HomePage.jsx` there.
+4. Replace or merge `App.jsx` and `main.jsx` as needed.
+5. Run the dev server (`npm run dev`) — Vite supports importing JSON directly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Notes & next steps
+- If you want client-side routing to a recipe details page, add `react-router-dom` and create a `RecipeDetail` route/component.
+- To fetch `data.json` instead of importing it (useful if you move it to `public/`), replace the `useEffect` with a `fetch('/data.json')` call.
+- Swap placeholder images for real images or use an image CDN for better performance.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Enjoy! If you want, I can now:
+- add a `RecipeDetail` component and route,
+- wire up local "Save" state / favorites, or
+- replace placeholder images with Unsplash queries.
