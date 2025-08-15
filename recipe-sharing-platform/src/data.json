@@ -3,30 +3,100 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://via.placeholder.com/600x400?text=Carbonara"
+    "image": "/images/carbonara.jpg",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta or bacon",
+      "2 large eggs",
+      "50g pecorino or parmesan, grated",
+      "Freshly ground black pepper",
+      "Salt"
+    ],
+    "instructions": [
+      "Cook spaghetti in salted boiling water until al dente.",
+      "Fry pancetta until crisp.",
+      "Beat eggs with cheese and pepper.",
+      "Drain pasta (reserve some cooking water) and combine with pancetta off the heat.",
+      "Quickly mix in egg & cheese mixture, adding a splash of pasta water to create a creamy sauce.",
+      "Serve immediately with extra cheese and pepper."
+    ]
   },
   {
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://via.placeholder.com/600x400?text=Chicken+Tikka+Masala"
+    "image": "/images/tikka-masala.jpg",
+    "ingredients": [
+      "500g boneless chicken, cubed",
+      "1 cup yogurt",
+      "2 tbsp tikka masala spice or a mix of cumin, coriander, paprika",
+      "400g canned tomatoes",
+      "100ml cream",
+      "2 tbsp butter",
+      "Salt"
+    ],
+    "instructions": [
+      "Marinate chicken in yogurt and spices for at least 30 minutes.",
+      "Grill or pan-fry chicken until cooked through.",
+      "Prepare sauce with tomatoes, butter and spices.",
+      "Simmer chicken in the sauce and finish with cream.",
+      "Serve with rice or naan."
+    ]
   },
   {
     "id": 3,
     "title": "Avocado Toast",
     "summary": "Toasted sourdough topped with smashed avocado, lemon, chili flakes and olive oil.",
-    "image": "https://via.placeholder.com/600x400?text=Avocado+Toast"
+    "image": "/images/avocado-toast.jpg",
+    "ingredients": [
+      "2 slices sourdough",
+      "1 ripe avocado",
+      "Juice of half a lemon",
+      "Chili flakes",
+      "Olive oil",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Toast bread to your liking.",
+      "Mash avocado with lemon, salt and pepper.",
+      "Spread on toast and finish with chili flakes and olive oil."
+    ]
   },
   {
     "id": 4,
     "title": "Beef Stir Fry",
     "summary": "Quick stir-fried beef with vegetables and a savory soy-ginger sauce.",
-    "image": "https://via.placeholder.com/600x400?text=Beef+Stir+Fry"
+    "image": "/images/beef-stir-fry.jpg",
+    "ingredients": [
+      "400g beef strips",
+      "Assorted vegetables (bell pepper, broccoli, carrot)",
+      "2 tbsp soy sauce",
+      "1 tbsp grated ginger",
+      "1 tbsp cornstarch",
+      "Oil for frying"
+    ],
+    "instructions": [
+      "Toss beef in cornstarch and a little soy.",
+      "High-heat stir-fry beef briefly then remove.",
+      "Stir-fry vegetables, add beef back with sauce and finish."
+    ]
   },
   {
     "id": 5,
     "title": "Vegan Buddha Bowl",
     "summary": "A colorful bowl of quinoa, roasted veg, chickpeas, and tahini dressing.",
-    "image": "https://via.placeholder.com/600x400?text=Vegan+Buddha+Bowl"
+    "image": "/images/buddha-bowl.jpg",
+    "ingredients": [
+      "1 cup quinoa",
+      "Assorted roasted vegetables",
+      "1 can chickpeas",
+      "Tahini, lemon, garlic for dressing",
+      "Salt & pepper"
+    ],
+    "instructions": [
+      "Cook quinoa according to package.",
+      "Roast vegetables and season chickpeas.",
+      "Assemble bowl and drizzle tahini dressing."
+    ]
   }
 ]
