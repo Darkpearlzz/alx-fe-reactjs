@@ -4,17 +4,25 @@ function RegistrationForm() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!username || !email || !password) {
-      setError("All fields are required!");
+    if (!username) {
+      setErrors("Username is required");
+      return;
+    }
+    if (!email) {
+      setErrors("Email is required");
+      return;
+    }
+    if (!password) {
+      setErrors("Password is required");
       return;
     }
 
-    setError("");
+    setErrors("");
     console.log("Controlled Form Submitted:", { username, email, password });
     alert("Controlled registration successful!");
   };
@@ -28,8 +36,9 @@ function RegistrationForm() {
         Controlled Form
       </h2>
 
-      {error && <p className="text-red-500 text-sm">{error}</p>}
+      {errors && <p className="text-red-500 text-sm">{errors}</p>}
 
+      {/* Username */}
       <div>
         <label htmlFor="username" className="block mb-1 font-medium text-sm">
           Username
