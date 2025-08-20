@@ -23,7 +23,16 @@ export default function App() {
             <Route path="/blog/:id" element={<BlogPost />} />
 
             <Route
-              path="profile/*"
+              path="/profile"
+              element={
+                <ProtectedRoute>
+                  <Profile />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+              path="/profile/*"
               element={
                 <ProtectedRoute>
                   <Profile />
