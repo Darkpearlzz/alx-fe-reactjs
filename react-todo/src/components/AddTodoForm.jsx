@@ -29,6 +29,7 @@ export default function AddTodoForm({ onAdd }) {
       />
       <button
         type="submit"
+        aria-label="add-button"
         className="rounded-lg px-4 py-2 bg-teal-500 hover:bg-teal-600 text-white font-medium transition"
       >
         Add
