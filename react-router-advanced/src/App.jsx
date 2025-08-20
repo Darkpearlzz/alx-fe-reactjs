@@ -5,7 +5,7 @@ import Layout from "./layout/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import Blog from "./pages/Blog.jsx";
 import BlogPost from "./pages/BlogPost.jsx";
-import Profile from "./components/Profile.jsx";
+import Profile from "./compnents/Profile.jsx";
 import ProfileDetails from "./components/ProfileDetails.jsx";
 import ProfileSettings from "./components/ProfileSettings.jsx";
 import Login from "./pages/Login.jsx";
@@ -26,7 +26,7 @@ export default function App() {
             </Route>
 
             <Route
-              path="profile"
+              path="profile/*"
               element={
                 <ProtectedRoute>
                   <Profile />
