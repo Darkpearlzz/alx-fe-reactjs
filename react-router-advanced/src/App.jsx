@@ -5,9 +5,7 @@ import Layout from "./layout/Layout.jsx";
 import Home from "./pages/Home.jsx";
 import Blog from "./pages/Blog.jsx";
 import BlogPost from "./pages/BlogPost.jsx";
-import Profile from "./compnents/Profile.jsx";
-import ProfileDetails from "./components/ProfileDetails.jsx";
-import ProfileSettings from "./components/ProfileSettings.jsx";
+import Profile from "./components/Profile.jsx"; // fixed path
 import Login from "./pages/Login.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import ProtectedRoute from "./auth/ProtectedRoute.jsx";
@@ -20,10 +18,9 @@ export default function App() {
           <Route element={<Layout />}>
             <Route index element={<Home />} />
 
-            <Route path="blog">
-              <Route index element={<Blog />} />
-              <Route path=":slug" element={<BlogPost />} />
-            </Route>
+            <Route path="blog" element={<Blog />} />
+
+            <Route path="blog/:id" element={<BlogPost />} />
 
             <Route
               path="profile/*"
@@ -32,11 +29,7 @@ export default function App() {
                   <Profile />
                 </ProtectedRoute>
               }
-            >
-              <Route index element={<ProfileDetails />} />
-              <Route path="details" element={<ProfileDetails />} />
-              <Route path="settings" element={<ProfileSettings />} />
-            </Route>
+            />
 
             <Route path="login" element={<Login />} />
             <Route path="*" element={<NotFound />} />

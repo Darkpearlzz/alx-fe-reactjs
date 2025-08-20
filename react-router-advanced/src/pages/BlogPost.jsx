@@ -1,19 +1,23 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function BlogPost() {
-  const { slug } = useParams();
-  const title = slug.replaceAll("-", " ");
+  const { id } = useParams();
 
   return (
-    <article className="space-y-3">
-      <h1 className="text-2xl font-semibold capitalize">{title}</h1>
-      <p className="text-gray-700">
-        Loaded via a <b>dynamic route</b>:{" "}
-        <code className="bg-gray-100 px-1 rounded">/blog/:slug</code>.
+    <article className="max-w-3xl mx-auto p-6 bg-white rounded-2xl shadow-md">
+      <h1 className="text-3xl font-bold text-gray-800 mb-4">Blog Post #{id}</h1>
+      <p className="text-gray-600 leading-relaxed mb-6">
+        This is the content for blog post{" "}
+        <span className="font-semibold text-gray-800">{id}</span>. You can fetch
+        data from an API or a database here to show the full article content.
       </p>
-      <Link to="/blog" className="inline-block text-blue-700 hover:underline">
-        ← Back to Blog
-      </Link>
+
+      <div className="border-t border-gray-200 pt-4">
+        <p className="text-sm text-gray-500">
+          Posted on <span className="italic">August 20, 2025</span> by{" "}
+          <span className="font-medium text-gray-700">Author Name</span>
+        </p>
+      </div>
     </article>
   );
 }
